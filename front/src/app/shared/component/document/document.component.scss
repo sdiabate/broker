@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+tr.element-row:hover {
+    background: whitesmoke;
+}
+
+.mat-column-type {
+    width: 30px !important;
+}
+
+.mat-column-delete {
+    width: 15px !important;
+}
+
+.mat-column-download {
+    width: 15px !important;
+}

@@ -1,0 +1,38 @@
+<div [formGroup]="form" fxLayout="column" fxLayoutAlign="start stretch">
+    <!-- <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="80px">
+        <mat-form-field fxFlex="20">
+            <mat-label>Numéro</mat-label>
+            <input type="input" matInput>
+        </mat-form-field>
+        <mat-form-field fxFlex="calc(80%-80px)">
+            <mat-label>Rue/Avenue</mat-label>
+            <input type="input" matInput>
+        </mat-form-field>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="80px">
+        <mat-form-field fxFlex="20">
+            <mat-label>CP</mat-label>
+            <input type="input" matInput>
+        </mat-form-field>
+        <mat-form-field fxFlex="calc(80%-80px)">
+            <mat-label>Ville</mat-label>
+            <input type="input" matInput>
+        </mat-form-field>
+    </div> -->
+
+    <mat-form-field fxFlex>
+        <mat-label>Numéro - Rue</mat-label>
+        <app-address-row formControlName="street" required></app-address-row>
+    </mat-form-field>
+
+    <mat-form-field fxFlex>
+        <mat-label>Code postal - Ville</mat-label>
+        <app-address-row formControlName="city" required></app-address-row>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Pays</mat-label>
+        <input formControlName="country" type="input" matInput>
+    </mat-form-field>
+</div>

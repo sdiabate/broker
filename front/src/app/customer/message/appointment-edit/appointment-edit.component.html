@@ -1,0 +1,39 @@
+<h2 mat-dialog-title>Ajout de Rendez-vous</h2>
+<div mat-dialog-content>
+    <form [formGroup]="form">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+            <mat-form-field>
+                <mat-label>Direction</mat-label>
+                <mat-select formControlName="direction" required>
+                  <mat-option *ngFor="let element of directions$ | async" [value]="element">
+                    {{element.value}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Type</mat-label>
+                <mat-select formControlName="type" required>
+                  <mat-option *ngFor="let element of types$ | async" [value]="element">
+                    {{element.value}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Agent" formControlName="host">
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput placeholder="Durée" formControlName="duration">
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput placeholder="Sujet" formControlName="subject">
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="Message" formControlName="body"></textarea>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end stretch">
+  <button mat-button cdkFocusInitial (click)="dialogRef.close()">Annuler</button>
+  <button mat-button [mat-dialog-close]="appointment">Ajouter</button>
+</div>

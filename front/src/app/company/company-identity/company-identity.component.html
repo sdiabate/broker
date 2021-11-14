@@ -1,0 +1,40 @@
+<form [formGroup]="form">
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <mat-form-field>
+            <input matInput placeholder="Siret" formControlName="siret">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Raison sociale" formControlName="name">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Téléphone 1" formControlName="phone1">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Téléphone 2" formControlName="phone2">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Fax" formControlName="fax">
+        </mat-form-field> 
+        <mat-form-field>
+            <mat-label>Date d'enregistrement</mat-label>
+            <input matInput [matDatepicker]="registrationDatePicker">
+            <mat-datepicker-toggle matSuffix [for]="registrationDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #registrationDatePicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Interlocureur" formControlName="interlocutor">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Rôle interlocureur" formControlName="interlocutorRole">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Activity" formControlName="activity">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput placeholder="Nombre de salariés" formControlName="employeesCount">
+        </mat-form-field> 
+    </div>
+</form>

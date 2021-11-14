@@ -1,0 +1,56 @@
+.filter {
+    width: 30%;
+}
+
+.filter-group {
+    margin-top: 36px;
+}
+
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+}
+
+.mat-column-more {
+    width: 60px !important;
+}
+
+tr.detail-row {
+    height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+    background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+    background: #efefef;
+}
+
+.element-row td {
+    border-bottom-width: 0;
+}
+
+tr.element-row.expanded-row {
+    background: whitesmoke;
+}
+
+.element-detail {
+    overflow: hidden;
+}
+
+.element-detail-content {
+    background: whitesmoke;
+    padding: 20px 50px 50px 50px;
+}
+
+.expanded-row {
+    background: whitesmoke;
+}

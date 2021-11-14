@@ -1,0 +1,1226 @@
+{
+    "warranties": [
+      "Bris de glace",
+      "Vol",
+      "Incendie",
+      "Collision",
+      "Protection juridique",
+      "Assistance",
+      "Dommages subis par le véhicule assuré",
+      "Dommages survenus sur circuit privé",
+      "Dommages concernant les biens et les animaux appartenant au conducteur",
+      "Dommages causés par les professionnels de la réparation et du contrôle technique"
+    ],
+
+    "contractCategories": [
+      {
+        "label": "Bien",
+        "contractTypes": [
+          {
+            "label": "Auto"
+          },
+          {
+            "label": "Habitation"
+          },
+          {
+            "label": "Moto"
+          },
+          {
+            "label": "Bateau"
+          },
+          {
+            "label": "Marchandises"
+          },
+          {
+            "label": "Vélo"
+          },
+          {
+            "label": "High tech"
+          },
+          {
+            "label": "Bris de glace"
+          }
+        ]
+      },
+      {
+        "label": "Vie",
+        "contractTypes": [
+          {
+            "label": "Accident"
+          },
+          {
+            "label": "Obsèques"
+          },
+          {
+            "label": "Santé"
+          },
+          {
+            "label": "Prêt"
+          },
+          {
+            "label": "Complémentaire"
+          }
+        ]
+      }
+    ],
+
+    "contractTypes": [
+      {
+        "label": "Auto",
+        "items": [
+          {
+            "label": "Véhicule",
+            "params": [
+              {
+                "name": "Marque",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Puissance fiscale",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Date de première mise en circulation",
+                "type": "DATE",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Numéro d'immatriculation",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Classe",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Numéro de série",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Date d'acquisition",
+                "type": "DATE",
+                "constraint": {
+                  "min": 1
+                }
+              }
+            ],
+            "multi": false
+          },
+          {
+            "label": "Conducteur principal",
+            "params": [
+              {
+                "name": "Nom",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Prénom",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Date de naissance",
+                "type": "DATE",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Numéro permis",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Date permis",
+                "type": "DATE",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Usage",
+                "type": "LIST",
+                "constraint": {
+                  "list": ["Privé", "Professionnel"]
+                }
+              }
+            ],
+            "multi": false
+          },
+          {
+            "label": "Conducteur secondaire",
+            "params": [
+              {
+                "name": "Nom",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Prénom",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Date de naissance",
+                "type": "DATE",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Numéro permis",
+                "type": "TEXT",
+                "constraint": {
+                  "min": 1
+                }
+              },
+              {
+                "name": "Date permis",
+                "type": "DATE",
+                "constraint": {
+                  "min": 1
+                }
+              }
+            ],
+            "multi": true
+          }
+        ]
+      }
+    ],
+
+    "genders": [
+      {
+        "key": "F", 
+        "value": "Female"
+      },
+      {
+        "key": "M", 
+        "value": "Male"
+      }
+    ],
+
+    "relationships": [
+      {
+        "key": "Child", 
+        "value": "Child"
+      },
+      {
+        "key": "partner", 
+        "value": "partner"
+      },
+      {
+        "key": "Parent", 
+        "value": "Parent"
+      }
+    ],
+
+    "contract": {
+      "number": 13317,
+      "provider": "ZILIDIUM",
+      "label": "Auto",
+      "offer": "Auto chez ZILIDIUM",
+      "validated": true,
+      "billingCycle": "Mensuel",
+      "date": "Sunday, April 24, 2016 2:51 PM",
+      "documents": [
+        {
+          "title": "minim.pdf",
+          "date": "2014-08-15T11:42:46.000+00:00"
+        },
+        {
+          "title": "voluptate.xlsx",
+          "date": "2017-04-01T12:44:25.000+00:00"
+        },
+        {
+          "title": "non.jpg",
+          "date": "2020-05-26T07:17:14.000+00:00"
+        }
+      ]
+    },
+
+    "customer": {
+      "id": "60298c7b3cf0edc3a33d0b9c",
+      "code": 48800,
+      "validated": true,
+      "person": {
+        "firstname": "Kristina",
+        "lastname": "Oconnor",
+        "gender": "Female",
+        "birthdate": "2014-10-31T01:52:10.000+00:00",
+        "relationships": [
+          {
+            "firstname": "Jeanine",
+            "lastname": "Battle",
+            "gender": "Female",
+            "birthdate": "2019-08-11T01:43:34.000+00:00",
+            "relationship": "Parent"
+          },
+          {
+            "firstname": "Atkins",
+            "lastname": "Kemp",
+            "gender": "Female",
+            "birthdate": "2016-11-23T01:35:15.000+00:00",
+            "relationship": "partner"
+          },
+          {
+            "firstname": "Jacquelyn",
+            "lastname": "Campos",
+            "gender": "Female",
+            "birthdate": "2017-08-31T02:01:29.000+00:00",
+            "relationship": "Child"
+          }
+        ]
+      },
+      "email": "kristina.oconnor@test.com",
+      "phones": [
+        "+33 (898) 581-2312",
+        "+33 (954) 504-2552"
+      ],
+      "address": {
+        "streetNumber": 238,
+        "streetName": "Conselyea Street",
+        "zipCode": 2902,
+        "city": "Dante",
+        "state": "Ohio"
+      },
+      "registrationDate": "2017-01-04T08:20:00.000+00:00",
+      "trader": {
+        "id": "60298c7b40ad73f2b3542355",
+        "firstname": "Pennington",
+        "lastname": "Carpenter",
+        "login": "pennington.carpenter@test.com"
+      },
+      "appointments": [
+        {
+          "subject": "Lorem fugiat anim nisi ipsum",
+          "body": "Elit excepteur consectetur incididunt elit eu. Culpa veniam irure laborum qui quis amet cillum. Elit adipisicing reprehenderit laborum elit incididunt voluptate et aliqua voluptate. Mollit eu occaecat eiusmod laborum qui consectetur et velit.",
+          "direction": "IN",
+          "type": "MAIL",
+          "date": "2019-07-20T04:02:50.000+00:00",
+          "duration": 30,
+          "host": {
+            "id": "60298c7b40ad73f2b3542355",
+            "firstname": "Pennington",
+            "lastname": "Carpenter",
+            "login": "pennington.carpenter@test.com"
+          },
+          "attachments": [
+            {
+              "title": "minim.pdf",
+              "date": "2014-08-15T11:42:46.000+00:00"
+            },
+            {
+              "title": "maxi.xslx",
+              "date": "2014-08-15T11:42:46.000+00:00"
+            }
+          ]
+        },
+        {
+          "subject": "sint cupidatat culpa ut consectetur",
+          "body": "Labore proident ipsum tempor cillum pariatur dolor pariatur voluptate nostrud velit. Non magna commodo laboris labore pariatur elit aliqua velit. Adipisicing est officia ipsum id velit ullamco nisi pariatur enim. Deserunt cupidatat ullamco exercitation duis. Tempor eiusmod veniam minim nisi culpa ut elit. Deserunt ea eiusmod ipsum amet incididunt do fugiat laboris do proident.",
+          "direction": "OUT",
+          "type": "PHONE",
+          "date": "2018-04-04T04:19:13.000+00:00",
+          "duration": 60,
+          "host": {
+            "id": "60298c7b40ad73f2b3542355",
+            "firstname": "Adrian",
+            "lastname": "Cheffer",
+            "login": "pennington.carpenter@test.com"
+          },
+          "attachments": [
+            {
+              "title": "minim.pdf",
+              "date": "2014-08-15T11:42:46.000+00:00"
+            }
+          ]
+        },
+        {
+          "subject": "occaecat ipsum exercitation adipisicing nulla",
+          "body": "Ex enim sunt aliquip excepteur officia pariatur excepteur incididunt consectetur consequat excepteur ullamco reprehenderit id. Do proident pariatur laboris eiusmod anim eiusmod Lorem nisi est. Amet voluptate nisi sunt mollit tempor aliquip id elit eu laborum qui culpa ex adipisicing. Aliqua tempor eu nulla sit consequat ex cillum labore ipsum consequat aute consectetur id. Quis voluptate in dolor Lorem id dolore cupidatat velit ut eu duis sint. Lorem do ullamco culpa magna sint pariatur fugiat sit minim.",
+          "direction": "IN",
+          "type": "PHYSICAL",
+          "date": "2018-09-06T10:38:28.000+00:00",
+          "duration": 15,
+          "host": {
+            "id": "60298c7b40ad73f2b3542355",
+            "firstname": "John",
+            "lastname": "River",
+            "login": "pennington.carpenter@test.com"
+          },
+          "attachments": [
+            {
+              "title": "minim.pdf",
+              "date": "2014-08-15T11:42:46.000+00:00"
+            }
+          ]
+        }
+      ],
+      "documents": [
+        {
+          "title": "ad est aliquip aute minim.pdf",
+          "date": "2014-08-15T11:42:46.000+00:00"
+        },
+        {
+          "title": "pariatur duis labore esse voluptate.xlsx",
+          "date": "2017-04-01T12:44:25.000+00:00"
+        },
+        {
+          "title": "commodo labore labore voluptate non.jpg",
+          "date": "2020-05-26T07:17:14.000+00:00"
+        }
+      ],
+      "contracts": [
+        {
+          "number": 13317,
+          "provider": "ZILIDIUM",
+          "label": "Bateau",
+          "offer": "Bateau chez ZILIDIUM",
+          "validated": true,
+          "billingCycle": "Annuel",
+          "date": "Sunday, April 24, 2016 2:51 PM"
+        },
+        {
+          "number": 80856,
+          "provider": "ORGANICA",
+          "label": "Habitation",
+          "offer": "Habitation chez ORGANICA",
+          "validated": false,
+          "billingCycle": "Annuel",
+          "date": "Sunday, January 26, 2020 5:21 AM"
+        },
+        {
+          "number": 43008,
+          "provider": "ZANILLA",
+          "label": "Habitation",
+          "offer": "Habitation chez ZANILLA",
+          "validated": false,
+          "billingCycle": "Annuel",
+          "date": "Thursday, July 9, 2020 10:50 PM"
+        }
+      ]
+    },
+
+    "customers": [
+      {
+        "id": "60298c7b3cf0edc3a33d0b9c",
+        "code": 48800,
+        "validated": true,
+        "person": {
+          "firstname": "Kristina",
+          "lastname": "Oconnor",
+          "gender": "Female",
+          "birthdate": "2014-10-31T01:52:10.000+00:00",
+          "relationships": [
+            {
+              "firstname": "Jeanine",
+              "lastname": "Battle",
+              "gender": "Female",
+              "birthdate": "2019-08-11T01:43:34.000+00:00",
+              "relationship": "Parent"
+            },
+            {
+              "firstname": "Atkins",
+              "lastname": "Kemp",
+              "gender": "Female",
+              "birthdate": "2016-11-23T01:35:15.000+00:00",
+              "relationship": "partner"
+            },
+            {
+              "firstname": "Jacquelyn",
+              "lastname": "Campos",
+              "gender": "Female",
+              "birthdate": "2017-08-31T02:01:29.000+00:00",
+              "relationship": "Child"
+            }
+          ]
+        },
+        "email": "kristina.oconnor@test.com",
+        "phones": [
+          "+33 (898) 581-2312",
+          "+33 (954) 504-2552"
+        ],
+        "address": {
+          "streetNumber": 238,
+          "streetName": "Conselyea Street",
+          "zipCode": 2902,
+          "city": "Dante",
+          "state": "Ohio"
+        },
+        "registrationDate": "2017-01-04T08:20:00.000+00:00",
+        "trader": {
+          "id": "60298c7b40ad73f2b3542355",
+          "firstname": "Pennington",
+          "lastname": "Carpenter",
+          "login": "pennington.carpenter@test.com"
+        }
+      },
+      {
+        "id": "60298c7b0503b433057df097",
+        "code": 30823,
+        "validated": true,
+        "person": {
+          "firstname": "Juliet",
+          "lastname": "Daniel",
+          "gender": "Male",
+          "birthdate": "2021-01-21T06:51:39.000+00:00"
+        },
+        "email": "juliet.daniel@test.com",
+        "phones": [
+          "+33 (821) 405-3810",
+          "+33 (808) 425-2480"
+        ],
+        "address": {
+          "streetNumber": 309,
+          "streetName": "Coleman Street",
+          "zipCode": 2163,
+          "city": "Walland",
+          "state": "Wyoming"
+        },
+        "registrationDate": "2019-05-05T03:19:20.000+00:00",
+        "trader": {
+          "id": "60298c7b68bd387d57ac9e62",
+          "firstname": "Mendez",
+          "lastname": "Cannon",
+          "login": "mendez.cannon@test.com"
+        }
+      },
+      {
+        "id": "60298c7b2000d9987996e197",
+        "code": 93774,
+        "validated": true,
+        "person": {
+          "firstname": "Perry",
+          "lastname": "Schmidt",
+          "gender": "Male",
+          "birthdate": "2017-03-03T07:20:10.000+00:00",
+          "relationships": [
+            {
+              "firstname": "Jeanine",
+              "lastname": "Battle",
+              "gender": "Female",
+              "birthdate": "2019-08-11T01:43:34.000+00:00",
+              "relationship": "Parent"
+            },
+            {
+              "firstname": "Atkins",
+              "lastname": "Kemp",
+              "gender": "Female",
+              "birthdate": "2016-11-23T01:35:15.000+00:00",
+              "relationship": "partner"
+            },
+            {
+              "firstname": "Jacquelyn",
+              "lastname": "Campos",
+              "gender": "Female",
+              "birthdate": "2017-08-31T02:01:29.000+00:00",
+              "relationship": "Child"
+            }
+          ]
+        },
+        "email": "perry.schmidt@test.com",
+        "phones": [
+          "+33 (816) 529-2624",
+          "+33 (829) 521-3027"
+        ],
+        "address": {
+          "streetNumber": 580,
+          "streetName": "Kane Place",
+          "zipCode": 9784,
+          "city": "Darbydale",
+          "state": "Palau"
+        },
+        "registrationDate": "2015-01-31T06:21:37.000+00:00",
+        "trader": {
+          "id": "60298c7b1a947ee60d2e09ff",
+          "firstname": "Edith",
+          "lastname": "Noble",
+          "login": "edith.noble@test.com"
+        }
+      },
+      {
+        "id": "60298c7b33d9ef618252365c",
+        "code": 79904,
+        "validated": true,
+        "person": {
+          "firstname": "Wilkinson",
+          "lastname": "Roth",
+          "gender": "Female",
+          "birthdate": "2014-02-21T02:16:36.000+00:00",
+          "relationships": [
+            {
+              "firstname": "Jeanine",
+              "lastname": "Battle",
+              "gender": "Female",
+              "birthdate": "2019-08-11T01:43:34.000+00:00",
+              "relationship": "Parent"
+            },
+            {
+              "firstname": "Atkins",
+              "lastname": "Kemp",
+              "gender": "Female",
+              "birthdate": "2016-11-23T01:35:15.000+00:00",
+              "relationship": "partner"
+            },
+            {
+              "firstname": "Jacquelyn",
+              "lastname": "Campos",
+              "gender": "Female",
+              "birthdate": "2017-08-31T02:01:29.000+00:00",
+              "relationship": "partner"
+            }
+          ]
+        },
+        "email": "wilkinson.roth@test.com",
+        "phones": [
+          "+33 (836) 468-3720",
+          "+33 (914) 470-2958"
+        ],
+        "address": {
+          "streetNumber": 435,
+          "streetName": "Harbor Lane",
+          "zipCode": 8746,
+          "city": "Gerton",
+          "state": "Arizona"
+        },
+        "registrationDate": "2020-06-09T06:41:27.000+00:00",
+        "trader": {
+          "id": "60298c7b050336836e3728c5",
+          "firstname": "Dorthy",
+          "lastname": "Crawford",
+          "login": "dorthy.crawford@test.com"
+        }
+      },
+      {
+        "id": "60298c7b9a27eb867ebae273",
+        "code": 56464,
+        "validated": true,
+        "person": {
+          "firstname": "Rush",
+          "lastname": "Snow",
+          "gender": "Female",
+          "birthdate": "2017-03-10T12:11:58.000+00:00",
+          "relationships": [
+            {
+              "firstname": "Jeanine",
+              "lastname": "Battle",
+              "gender": "Female",
+              "birthdate": "2019-08-11T01:43:34.000+00:00",
+              "relationship": "Parent"
+            },
+            {
+              "firstname": "Atkins",
+              "lastname": "Kemp",
+              "gender": "Female",
+              "birthdate": "2016-11-23T01:35:15.000+00:00",
+              "relationship": "partner"
+            },
+            {
+              "firstname": "Jacquelyn",
+              "lastname": "Campos",
+              "gender": "Female",
+              "birthdate": "2017-08-31T02:01:29.000+00:00",
+              "relationship": "partner"
+            }
+          ]
+        },
+        "email": "rush.snow@test.com",
+        "phones": [
+          "+33 (802) 416-3108",
+          "+33 (812) 547-2612"
+        ],
+        "address": {
+          "streetNumber": 750,
+          "streetName": "Campus Place",
+          "zipCode": 9744,
+          "city": "Chemung",
+          "state": "Texas"
+        },
+        "registrationDate": "2017-06-26T12:25:23.000+00:00",
+        "trader": {
+          "id": "60298c7b091b7396417c4b45",
+          "firstname": "Martinez",
+          "lastname": "Beach",
+          "login": "martinez.beach@test.com"
+        }
+      },
+      {
+        "id": "60298c7b70f33401d5e3c51a",
+        "code": 19242,
+        "validated": false,
+        "person": {
+          "firstname": "Dominique",
+          "lastname": "Miles",
+          "gender": "Male",
+          "birthdate": "2017-03-24T08:43:12.000+00:00",
+          "relationships": [
+            {
+              "firstname": "Jeanine",
+              "lastname": "Battle",
+              "gender": "Female",
+              "birthdate": "2019-08-11T01:43:34.000+00:00",
+              "relationship": "Parent"
+            },
+            {
+              "firstname": "Atkins",
+              "lastname": "Kemp",
+              "gender": "Female",
+              "birthdate": "2016-11-23T01:35:15.000+00:00",
+              "relationship": "partner"
+            },
+            {
+              "firstname": "Jacquelyn",
+              "lastname": "Campos",
+              "gender": "Female",
+              "birthdate": "2017-08-31T02:01:29.000+00:00",
+              "relationship": "partner"
+            }
+          ]
+        },
+        "email": "dominique.miles@test.com",
+        "phones": [
+          "+33 (951) 452-3701",
+          "+33 (859) 534-3990"
+        ],
+        "address": {
+          "streetNumber": 139,
+          "streetName": "Sapphire Street",
+          "zipCode": 5072,
+          "city": "Cecilia",
+          "state": "Missouri"
+        },
+        "registrationDate": "2016-10-04T06:09:08.000+00:00",
+        "trader": {
+          "id": "60298c7b42d4f077ffa459c5",
+          "firstname": "Kelsey",
+          "lastname": "Nichols",
+          "login": "kelsey.nichols@test.com"
+        }
+      },
+      {
+        "id": "60298c7be7fc355e3bdb2c4e",
+        "code": 15628,
+        "validated": false,
+        "person": {
+          "firstname": "Oneill",
+          "lastname": "Webb",
+          "gender": "Male",
+          "birthdate": "2020-12-21T02:30:08.000+00:00",
+          "relationships": [
+            {
+              "firstname": "Jeanine",
+              "lastname": "Battle",
+              "gender": "Female",
+              "birthdate": "2019-08-11T01:43:34.000+00:00",
+              "relationship": "Parent"
+            },
+            {
+              "firstname": "Atkins",
+              "lastname": "Kemp",
+              "gender": "Female",
+              "birthdate": "2016-11-23T01:35:15.000+00:00",
+              "relationship": "partner"
+            },
+            {
+              "firstname": "Jacquelyn",
+              "lastname": "Campos",
+              "gender": "Female",
+              "birthdate": "2017-08-31T02:01:29.000+00:00",
+              "relationship": "partner"
+            }
+          ]
+        },
+        "email": "oneill.webb@test.com",
+        "phones": [
+          "+33 (964) 488-3609",
+          "+33 (802) 473-2607"
+        ],
+        "address": {
+          "streetNumber": 861,
+          "streetName": "Campus Road",
+          "zipCode": 243,
+          "city": "Gibsonia",
+          "state": "Kansas"
+        },
+        "registrationDate": "2020-06-24T02:39:12.000+00:00",
+        "trader": {
+          "id": "60298c7b83d811e9303b97a1",
+          "firstname": "Deanne",
+          "lastname": "Burnett",
+          "login": "deanne.burnett@test.com"
+        }
+      },
+      {
+        "id": "60298c7bfd512667b15c38f3",
+        "code": 38123,
+        "validated": false,
+        "corporation": {
+          "siret": "7952-5529-4389-9349",
+          "name": "CYTRAK",
+          "creationDate": "2016-12-25T09:07:44.000+00:00"
+        },
+        "email": "cytrak@test.com",
+        "phones": [
+          "+33 (980) 436-3733",
+          "+33 (828) 415-2138"
+        ],
+        "address": {
+          "streetNumber": 5057,
+          "streetName": "Montieth Street",
+          "zipCode": 8631,
+          "city": "Lowgap",
+          "state": "Massachusetts"
+        },
+        "registrationDate": "2016-08-07T02:08:00.000+00:00",
+        "trader": {
+          "id": "60298c7b7c03441246f35244",
+          "firstname": "Carolyn",
+          "lastname": "Gibbs",
+          "login": "carolyn.gibbs@test.com"
+        }
+      },
+      {
+        "id": "60298c7bc746aadeaf3e36a2",
+        "code": 43453,
+        "validated": false,
+        "corporation": {
+          "siret": "5481-1745-1917-9360",
+          "name": "AVIT",
+          "creationDate": "2016-02-16T02:39:21.000+00:00"
+        },
+        "email": "avit@test.com",
+        "phones": [
+          "+33 (978) 405-3928",
+          "+33 (861) 540-3379"
+        ],
+        "address": {
+          "streetNumber": 6717,
+          "streetName": "Greenwood Avenue",
+          "zipCode": 4674,
+          "city": "Dupuyer",
+          "state": "Idaho"
+        },
+        "registrationDate": "2016-08-27T12:48:34.000+00:00",
+        "trader": {
+          "id": "60298c7b3570bf06a1e945aa",
+          "firstname": "Alisa",
+          "lastname": "Wolfe",
+          "login": "alisa.wolfe@test.com"
+        }
+      },
+      {
+        "id": "60298c7ba4fd8927076d73da",
+        "code": 22189,
+        "validated": false,
+        "corporation": {
+          "siret": "6091-6447-6466-4963",
+          "name": "SLUMBERIA",
+          "creationDate": "2018-06-18T06:08:50.000+00:00"
+        },
+        "email": "slumberia@test.com",
+        "phones": [
+          "+33 (846) 546-3956",
+          "+33 (905) 468-2518"
+        ],
+        "address": {
+          "streetNumber": 2350,
+          "streetName": "Grant Avenue",
+          "zipCode": 6760,
+          "city": "Sabillasville",
+          "state": "Northern Mariana Islands"
+        },
+        "registrationDate": "2014-08-28T06:21:27.000+00:00",
+        "trader": {
+          "id": "60298c7b8ea2f932a9d47de2",
+          "firstname": "Jordan",
+          "lastname": "Bradford",
+          "login": "jordan.bradford@test.com"
+        }
+      },
+      {
+        "id": "60298c7b7b9548229f9ed039",
+        "code": 58602,
+        "validated": false,
+        "corporation": {
+          "siret": "8926-9285-4104-2673",
+          "name": "KONGENE",
+          "creationDate": "2017-09-01T12:13:47.000+00:00"
+        },
+        "email": "kongene@test.com",
+        "phones": [
+          "+33 (877) 597-3395",
+          "+33 (901) 577-2521"
+        ],
+        "address": {
+          "streetNumber": 8481,
+          "streetName": "Colonial Road",
+          "zipCode": 1682,
+          "city": "Ticonderoga",
+          "state": "New Mexico"
+        },
+        "registrationDate": "2021-01-05T11:31:58.000+00:00",
+        "trader": {
+          "id": "60298c7ba665e502a065e219",
+          "firstname": "Edwina",
+          "lastname": "Vance",
+          "login": "edwina.vance@test.com"
+        }
+      },
+      {
+        "id": "60298c7ba397d3b025eef891",
+        "code": 85924,
+        "validated": true,
+        "corporation": {
+          "siret": "4003-4699-8687-8254",
+          "name": "EXPOSA",
+          "creationDate": "2019-05-17T03:01:58.000+00:00"
+        },
+        "email": "exposa@test.com",
+        "phones": [
+          "+33 (819) 525-3036",
+          "+33 (806) 424-2313"
+        ],
+        "address": {
+          "streetNumber": 8902,
+          "streetName": "Jackson Street",
+          "zipCode": 2283,
+          "city": "Rew",
+          "state": "Puerto Rico"
+        },
+        "registrationDate": "2015-12-23T10:21:23.000+00:00",
+        "trader": {
+          "id": "60298c7ba52886d0a2550303",
+          "firstname": "Liliana",
+          "lastname": "Weiss",
+          "login": "liliana.weiss@test.com"
+        }
+      },
+      {
+        "id": "60298c7b637f5fc5d558cbe8",
+        "code": 91510,
+        "validated": false,
+        "corporation": {
+          "siret": "8434-1826-6352-7391",
+          "name": "PORTICO",
+          "creationDate": "2016-02-07T09:08:35.000+00:00"
+        },
+        "email": "portico@test.com",
+        "phones": [
+          "+33 (890) 548-3413",
+          "+33 (843) 469-2071"
+        ],
+        "address": {
+          "streetNumber": 2614,
+          "streetName": "Butler Street",
+          "zipCode": 8929,
+          "city": "Ballico",
+          "state": "Nebraska"
+        },
+        "registrationDate": "2019-05-15T06:39:37.000+00:00",
+        "trader": {
+          "id": "60298c7b37d880593acec1ed",
+          "firstname": "Margarita",
+          "lastname": "Barr",
+          "login": "margarita.barr@test.com"
+        }
+      },
+      {
+        "id": "60298c7be0bce2f601fa7f5f",
+        "code": 12704,
+        "validated": true,
+        "corporation": {
+          "siret": "8813-8508-7253-6819",
+          "name": "DIGIFAD",
+          "creationDate": "2015-02-02T08:35:33.000+00:00"
+        },
+        "email": "digifad@test.com",
+        "phones": [
+          "+33 (890) 470-2821",
+          "+33 (866) 542-2781"
+        ],
+        "address": {
+          "streetNumber": 6811,
+          "streetName": "Manhattan Avenue",
+          "zipCode": 4506,
+          "city": "Carrizo",
+          "state": "Tennessee"
+        },
+        "registrationDate": "2016-07-02T10:07:09.000+00:00",
+        "trader": {
+          "id": "60298c7bde95460d22de76c0",
+          "firstname": "Bridges",
+          "lastname": "Shannon",
+          "login": "bridges.shannon@test.com"
+        }
+      },
+      {
+        "id": "60298c7b694ef4396661f75c",
+        "code": 90374,
+        "validated": true,
+        "corporation": {
+          "siret": "9401-7790-6579-2821",
+          "name": "BLURRYBUS",
+          "creationDate": "2016-12-21T04:31:20.000+00:00"
+        },
+        "email": "blurrybus@test.com",
+        "phones": [
+          "+33 (956) 516-2841",
+          "+33 (879) 445-3404"
+        ],
+        "address": {
+          "streetNumber": 6296,
+          "streetName": "Havens Place",
+          "zipCode": 5080,
+          "city": "Finderne",
+          "state": "Mississippi"
+        },
+        "registrationDate": "2020-01-05T03:19:31.000+00:00",
+        "trader": {
+          "id": "60298c7b7fa768b74242fbe5",
+          "firstname": "Garza",
+          "lastname": "Walton",
+          "login": "garza.walton@test.com"
+        }
+      }
+    ],
+    "contracts": [
+      {
+        "number": 13317,
+        "provider": "ZILIDIUM",
+        "label": "Bateau",
+        "offer": "Bateau chez ZILIDIUM",
+        "validated": true,
+        "billingCycle": "Annuel",
+        "date": "Sunday, April 24, 2016 2:51 PM"
+      },
+      {
+        "number": 80856,
+        "provider": "ORGANICA",
+        "label": "Habitation",
+        "offer": "Habitation chez ORGANICA",
+        "validated": false,
+        "billingCycle": "Annuel",
+        "date": "Sunday, January 26, 2020 5:21 AM"
+      },
+      {
+        "number": 43008,
+        "provider": "ZANILLA",
+        "label": "Habitation",
+        "offer": "Habitation chez ZANILLA",
+        "validated": false,
+        "billingCycle": "Annuel",
+        "date": "Thursday, July 9, 2020 10:50 PM"
+      },
+      {
+        "number": 51367,
+        "provider": "PHEAST",
+        "label": "Habitation",
+        "offer": "Habitation chez PHEAST",
+        "validated": true,
+        "billingCycle": "Annuel",
+        "date": "Saturday, January 16, 2016 6:09 PM"
+      },
+      {
+        "number": 74111,
+        "provider": "MEDMEX",
+        "label": "Bateau",
+        "offer": "Bateau chez MEDMEX",
+        "validated": true,
+        "billingCycle": "Annuel",
+        "date": "Thursday, April 23, 2020 9:46 PM"
+      },
+      {
+        "number": 18573,
+        "provider": "PAPRICUT",
+        "label": "Bateau",
+        "offer": "Bateau chez PAPRICUT",
+        "validated": false,
+        "billingCycle": "Annuel",
+        "date": "Friday, June 3, 2016 7:08 AM"
+      },
+      {
+        "number": 79036,
+        "provider": "ECOSYS",
+        "label": "Habitation",
+        "offer": "Habitation chez ECOSYS",
+        "validated": true,
+        "billingCycle": "Annuel",
+        "date": "Saturday, January 14, 2017 2:27 AM"
+      }
+    ],
+
+    "companies": [
+      {
+        "siret": "8353-5222-7197-3072",
+        "name": "STRALOY",
+        "creationDate": "2019-09-04T06:44:24.000+00:00",
+        "email": "straloy@test.com",
+        "phones": [
+          "+33 (808) 539-2623",
+          "+33 (817) 431-3423"
+        ],
+        "address": {
+          "streetNumber": 5351,
+          "streetName": "Woods Place",
+          "zipCode": 2924,
+          "city": "Bloomington",
+          "state": "Georgia"
+        },
+        "registrationDate": "2018-05-17T09:55:30.000+00:00"
+      },
+      {
+        "siret": "3448-3064-7682-6459",
+        "name": "DATAGEN",
+        "creationDate": "2019-04-11T12:40:05.000+00:00",
+        "email": "datagen@test.com",
+        "phones": [
+          "+33 (880) 565-3672",
+          "+33 (895) 452-2111"
+        ],
+        "address": {
+          "streetNumber": 4386,
+          "streetName": "Eldert Street",
+          "zipCode": 8002,
+          "city": "Sultana",
+          "state": "Ohio"
+        },
+        "registrationDate": "2016-02-21T07:22:45.000+00:00"
+      },
+      {
+        "siret": "5613-7139-2794-5139",
+        "name": "HATOLOGY",
+        "creationDate": "2016-11-07T09:54:44.000+00:00",
+        "email": "hatology@test.com",
+        "phones": [
+          "+33 (934) 427-3815",
+          "+33 (960) 472-3088"
+        ],
+        "address": {
+          "streetNumber": 4337,
+          "streetName": "Ash Street",
+          "zipCode": 1799,
+          "city": "Marenisco",
+          "state": "Nevada"
+        },
+        "registrationDate": "2017-07-28T02:24:58.000+00:00"
+      },
+      {
+        "siret": "4715-6547-9232-7474",
+        "name": "BITTOR",
+        "creationDate": "2018-01-24T07:30:21.000+00:00",
+        "email": "bittor@test.com",
+        "phones": [
+          "+33 (804) 448-3225",
+          "+33 (909) 473-2640"
+        ],
+        "address": {
+          "streetNumber": 2085,
+          "streetName": "Willow Street",
+          "zipCode": 3522,
+          "city": "Idamay",
+          "state": "Colorado"
+        },
+        "registrationDate": "2018-06-15T08:39:25.000+00:00"
+      },
+      {
+        "siret": "2050-7904-7664-2548",
+        "name": "EARTHMARK",
+        "creationDate": "2016-06-13T06:42:15.000+00:00",
+        "email": "earthmark@test.com",
+        "phones": [
+          "+33 (880) 549-2158",
+          "+33 (950) 446-3861"
+        ],
+        "address": {
+          "streetNumber": 9794,
+          "streetName": "Strickland Avenue",
+          "zipCode": 1324,
+          "city": "Clara",
+          "state": "Minnesota"
+        },
+        "registrationDate": "2016-09-02T04:33:38.000+00:00"
+      },
+      {
+        "siret": "3661-6245-5202-5949",
+        "name": "COMBOGEN",
+        "creationDate": "2019-05-27T08:16:54.000+00:00",
+        "email": "combogen@test.com",
+        "phones": [
+          "+33 (846) 564-2855",
+          "+33 (862) 426-2568"
+        ],
+        "address": {
+          "streetNumber": 4066,
+          "streetName": "Foster Avenue",
+          "zipCode": 4317,
+          "city": "Dennard",
+          "state": "Maine"
+        },
+        "registrationDate": "2016-07-11T07:26:36.000+00:00"
+      },
+      {
+        "siret": "9161-3825-6124-3470",
+        "name": "QUARMONY",
+        "creationDate": "2018-07-21T08:33:47.000+00:00",
+        "email": "quarmony@test.com",
+        "phones": [
+          "+33 (819) 520-3388",
+          "+33 (883) 568-3227"
+        ],
+        "address": {
+          "streetNumber": 6921,
+          "streetName": "Cooke Court",
+          "zipCode": 1451,
+          "city": "Oley",
+          "state": "North Carolina"
+        },
+        "registrationDate": "2017-07-27T01:57:34.000+00:00"
+      },
+      {
+        "siret": "1633-1865-4355-4793",
+        "name": "OPTYK",
+        "creationDate": "2018-08-07T05:20:04.000+00:00",
+        "email": "optyk@test.com",
+        "phones": [
+          "+33 (843) 404-2311",
+          "+33 (914) 455-3480"
+        ],
+        "address": {
+          "streetNumber": 7281,
+          "streetName": "Forest Place",
+          "zipCode": 7645,
+          "city": "Wollochet",
+          "state": "Mississippi"
+        },
+        "registrationDate": "2020-10-15T08:40:09.000+00:00"
+      }
+    ]
+}

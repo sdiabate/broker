@@ -1,0 +1,172 @@
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Offre">
+        <div class="tab-content">
+            <ng-container *ngTemplateOutlet="first"></ng-container>
+        </div>
+    </mat-tab>
+    <mat-tab label="Documents">
+        <div class="tab-content">
+            <mat-card class="mat-elevation-z0">
+                <mat-card-content>
+                    <app-document [documents]="customer.documents"></app-document>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </mat-tab>
+    <mat-tab label="Garanties">
+        <div class="tab-content">
+            <app-warranty [warranties]="warranties$ | async"></app-warranty>
+        </div>
+    </mat-tab>
+    <mat-tab label="Payments">
+        <div class="tab-content">
+        <mat-card class="mat-elevation-z0 payment-card">
+            <mat-card-header>
+                <mat-card-title>Payment</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <ng-container *ngTemplateOutlet="payment"></ng-container>
+            </mat-card-content>
+        </mat-card>
+        </div>
+    </mat-tab>
+</mat-tab-group>
+
+<ng-template #first>
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap>
+            <div fxFlex="50">
+                <ng-container *ngTemplateOutlet="left"></ng-container>
+            </div>
+            <div fxFlex="50">
+                <ng-container *ngTemplateOutlet="right"></ng-container>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #left>
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap>
+        
+        <mat-card class="mat-elevation-z0">
+            <mat-card-header>
+                <mat-card-title>Client</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="start stretch">
+                    <mat-form-field>
+                        <mat-label>Numéro client</mat-label>
+                        <input type="input" matInput>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Nom et prenom client</mat-label>
+                        <input type="input" matInput>
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="mat-elevation-z0" fxFlex="49">
+            <mat-card-header>
+                <mat-card-title>Assurance</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                    <mat-form-field>
+                        <mat-label>Produit</mat-label>
+                        <input type="input" matInput value="Assurance auto">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Assureur</mat-label>
+                        <input type="input" matInput value="AXA">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Date de signature</mat-label>
+                        <input matInput [matDatepicker]="signDatePicker">
+                        <mat-datepicker-toggle matSuffix [for]="signDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #signDatePicker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Date d'effet</mat-label>
+                        <input matInput [matDatepicker]="effectDatePicker">
+                        <mat-datepicker-toggle matSuffix [for]="effectDatePicker"></mat-datepicker-toggle>
+                        <mat-datepicker #effectDatePicker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Fractionnement</mat-label>
+                        <input type="input" matInput value="Anunuel">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>Renouvellement</mat-label>
+                        <input type="input" matInput value="Automatique">
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        
+        <mat-card class="mat-elevation-z0">
+            <mat-card-header>
+                <mat-card-title>Adresse du sinistre</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <app-address></app-address>
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="mat-elevation-z0">
+            <mat-card-header>
+                <mat-card-title>Adresse de facturation</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <app-address></app-address>
+            </mat-card-content>
+        </mat-card>
+
+        <!-- <mat-expansion-panel class="mat-elevation-z0" >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h2>Garanties de l'offre</h2>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-warranty [warranties$]="warranties$"></app-warranty>
+        </mat-expansion-panel> -->
+    </div>
+</ng-template>
+
+<ng-template #payment>
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <mat-form-field>
+            <mat-label>Mode de paiement</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let v of paymentModes" [value]="">
+                    {{v}}
+                </mat-option>
+                </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Prochain règlement</mat-label>
+            <input matInput [matDatepicker]="nexttDatePicker">
+            <mat-datepicker-toggle matSuffix [for]="nexttDatePicker"></mat-datepicker-toggle>
+            <mat-datepicker #nexttDatePicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Prime TTC</mat-label>
+            <input type="input" matInput value="">
+        </mat-form-field>
+    </div>
+</ng-template>
+
+<ng-template #right>
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap>
+        <ng-container *ngFor="let entry of data | keyvalue">
+            <app-contract-single-item-edit
+                *ngIf="!contractItems.get(entry.key).multi; else multi"
+                [data]="entry.value[0]"></app-contract-single-item-edit>
+            <ng-template #multi>
+                <app-contract-multi-item-edit
+                    [item]="contractItems.get(entry.key)"
+                    [data]="entry.value"
+                    [contract]="contract"></app-contract-multi-item-edit>
+            </ng-template>
+        </ng-container>
+    </div>
+</ng-template>

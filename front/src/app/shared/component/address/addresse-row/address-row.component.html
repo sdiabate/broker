@@ -1,0 +1,17 @@
+<div role="group" 
+     class="address-row-input-container"
+     fxLayout="row" fxLayoutAlign="start stretch"
+     [formGroup]="form"
+     [attr.aria-labelledby]="_formField?.getLabelId()">
+  <input class="input-element"
+         formControlName="number"
+         aria-label="number"
+         size="20"
+         #number>
+  <span class="input-spacer">&ndash;</span>
+  <input class="input-element"
+         formControlName="name"
+         aria-label="Name"
+         fxFlex
+         #name>
+</div>

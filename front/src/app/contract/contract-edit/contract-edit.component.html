@@ -1,0 +1,5 @@
+<ng-container *ngIf = "data$ | async as data">
+    <app-contract [contract]="data.contract"
+                  [customer]="data.customer"
+                  (onValidate)="save($event)"></app-contract>
+</ng-container>

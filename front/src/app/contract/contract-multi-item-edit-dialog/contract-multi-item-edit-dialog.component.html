@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{data.item.label}}</h2>
+<div mat-dialog-content>
+    <app-contract-item-edit [data]="data"></app-contract-item-edit>
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end stretch">
+    <button mat-button cdkFocusInitial (click)="dialogRef.close()">Annuler</button>
+    <button mat-button (click)="onValidate()">Ajouter</button>
+</div>

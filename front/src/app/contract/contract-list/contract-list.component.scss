@@ -1,0 +1,37 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+tr.element-row:hover {
+    background: whitesmoke;
+}
+
+.mat-column-edit {
+    width: 15px !important;
+}
+
+.mat-column-send {
+    width: 15px !important;
+}
+
+.mat-column-download {
+    width: 15px !important;
+}
+
+.green-dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(24, 121, 0);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red-dot {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(201, 5, 37);
+    border-radius: 50%;
+    display: inline-block;
+}

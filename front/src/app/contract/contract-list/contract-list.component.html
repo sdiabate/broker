@@ -1,0 +1,83 @@
+<div fxLayout="column" fxLayoutAlign="start end" fxLayoutGap>
+  <button mat-stroked-button color="primary" (click)="createContract()">Ajouter</button>
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+    
+    <!-- number Column -->
+    <ng-container matColumnDef="number">
+      <th mat-header-cell *matHeaderCellDef> Police </th>
+      <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+    </ng-container>
+  
+    <!-- label Column -->
+    <ng-container matColumnDef="label">
+      <th mat-header-cell *matHeaderCellDef> Libellé </th>
+      <td mat-cell *matCellDef="let element"> {{element.label}} </td>
+    </ng-container>
+  
+    <!-- date Column -->
+    <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef> Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.date | date:"MM/dd/yyyy"}} </td>
+    </ng-container>
+
+    <!-- billingCycle Column -->
+    <ng-container matColumnDef="billingCycle">
+      <th mat-header-cell *matHeaderCellDef> Factuartion </th>
+      <td mat-cell *matCellDef="let element"> {{element.billingCycle}} </td>
+    </ng-container>
+
+    <!-- validated Column -->
+    <ng-container matColumnDef="validated">
+      <th mat-header-cell *matHeaderCellDef> Validé </th>
+      <td mat-cell *matCellDef="let element">
+        <span [ngClass]="{'green-dot': element.validated, 'red-dot': !element.validated}"></span>
+      </td>
+    </ng-container>
+  
+    <!-- offer Column -->
+    <ng-container matColumnDef="offer">
+      <th mat-header-cell *matHeaderCellDef> Produit </th>
+      <td mat-cell *matCellDef="let element"> {{element.offer}} </td>
+    </ng-container>
+
+    <!-- provider Column -->
+    <ng-container matColumnDef="provider">
+      <th mat-header-cell *matHeaderCellDef> Compagie </th>
+      <td mat-cell *matCellDef="let element"> {{element.provider}} </td>
+    </ng-container>
+
+    <!-- edit action Column -->
+    <ng-container matColumnDef="edit">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" (click)="showContract(element)">
+              <mat-icon class="mat-18">reorder</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+
+    <!-- send action Column -->
+    <ng-container matColumnDef="send">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="accent" (click)="showContract(element)">
+              <mat-icon class="mat-18">mail</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+
+    <!-- download action Column -->
+    <ng-container matColumnDef="download">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" (click)="showContract(element)">
+              <mat-icon class="mat-18">download</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="element-row"></tr>
+  </table>
+</div>

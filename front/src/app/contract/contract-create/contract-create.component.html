@@ -1,0 +1,4 @@
+<app-contract *ngIf="contractType"
+              [contract]="contract$ | async"
+              [customer]="customer$ | async"
+              (onValidate)="save($event)"></app-contract>

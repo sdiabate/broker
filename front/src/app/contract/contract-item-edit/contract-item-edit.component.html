@@ -1,0 +1,24 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" [formGroup]="form">
+    <ng-container *ngFor="let element of data.values; let i = index">
+        <mat-form-field *ngIf="element.param.type=='TEXT'">
+            <mat-label>{{element.param.name}}</mat-label>
+            <input type="input" matInput value="{{element.value}}" formControlName="{{i}}">
+        </mat-form-field>
+
+        <mat-form-field *ngIf="element.param.type=='DATE'">
+            <mat-label>{{element.param.name}}</mat-label>
+            <input matInput [matDatepicker]="picker" value="{{element.value}}" formControlName="{{i}}">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field *ngIf="element.param.type=='LIST'">
+            <mat-label>{{element.param.name}}</mat-label>
+            <mat-select formControlName="{{i}}">
+                <mat-option *ngFor="let v of element.param.constraint.list" [value]="element.value">
+                    {{v}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </ng-container>
+</div>

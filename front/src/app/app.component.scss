@@ -1,0 +1,55 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 10px 30px;
+}
+
+.breadcrumb {
+    height: 36px;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    color: gray;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: whitesmoke;;
+}
+
+.mat-sidenav {
+    padding: 8px;
+    min-width: 300px;
+    background: #2e2e2e;
+}
+
+.mat-list-base .mat-list-item {
+    color: white;
+}
+
+.position-fixed{
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.mat-toolbar {
+    background: rgb(230, 230, 230);
+    color: rgb(114, 114, 114)
+ }
+
+ .mat-toolbar-row, .mat-toolbar-single-row, .mat-toolbar-multiple-rows {
+    height: 64px;
+    min-height: 64px;
+    padding-left: unset;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 12px;
+    color: white;
+}

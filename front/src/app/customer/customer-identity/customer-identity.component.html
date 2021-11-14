@@ -1,0 +1,54 @@
+<form [formGroup]="form">
+    <div fxLayout="column" fxLayoutAlign="start stretch">
+        <mat-form-field fxFlex>
+            <input matInput placeholder="Rapporteur" formControlName="trader">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Code" formControlName="code">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Genre" formControlName="gender">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Prénom" formControlName="firstname">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Nom" formControlName="lastname">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Date de naissance" formControlName="birthdate">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Lieu de naissance" formControlName="birthCountry">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="N° sécurité sociale" formControlName="ssn">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Situation matrimoniale" formControlName="maritalStatus">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Date enregistrement" formControlName="registrationDate">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Profession" formControlName="job">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Téléphone 1" formControlName="phone1">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Téléphone 2" formControlName="phone2">
+        </mat-form-field>
+    </div>
+</form>

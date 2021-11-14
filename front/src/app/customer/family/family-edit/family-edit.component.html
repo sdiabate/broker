@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Ajout de membre</h2>
+<div mat-dialog-content>
+    <form [formGroup]="form">
+        <div fxLayout="column" fxLayoutAlign="start stretch">
+            <mat-form-field>
+                <mat-label>Genre</mat-label>
+                <mat-select formControlName="gender" required>
+                  <mat-option *ngFor="let gender of genders$ | async" [value]="gender">
+                    {{gender.value}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Prénom" formControlName="firstname">
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput placeholder="Nom" formControlName="lastname">
+            </mat-form-field> 
+            <mat-form-field>
+                <input matInput placeholder="Date de naissance" formControlName="birthdate">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Relation</mat-label>
+                <mat-select formControlName="relationship" required>
+                  <mat-option *ngFor="let relation of relationships$ | async" [value]="relation">
+                    {{relation.value}}
+                  </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions fxLayout="row" fxLayoutAlign="end stretch">
+  <button mat-button cdkFocusInitial (click)="dialogRef.close()">Annuler</button>
+  <button mat-button [mat-dialog-close]="member">Ajouter</button>
+</div>
