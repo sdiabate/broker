@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { IconName } from '@fortawesome/fontawesome-svg-core';
 import { Document } from 'src/app/model/document.model';
 
 @Component({
@@ -27,7 +28,7 @@ export class DocumentComponent implements OnInit {
     this.dataSource.data = this.documents;
   }
 
-  getIcon(doc: Document) {
+  getIcon(doc: Document): IconName {
     let ext = doc.title.split(".").pop();
     let obj = this.iconList.filter(row => {
       if (row.type === ext) {
@@ -36,9 +37,9 @@ export class DocumentComponent implements OnInit {
     });
     if (obj.length > 0) {
       let icon = obj[0].icon;
-      return icon;
+      return icon as IconName;
     } else {
-      return 'file';
+      return 'file' as IconName;
     }
   }
 }

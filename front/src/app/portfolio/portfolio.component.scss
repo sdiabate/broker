@@ -19,7 +19,15 @@ th.mat-header-cell {
 }
 
 .mat-column-more {
+    width: 50px !important;
+}
+
+.mat-column-code {
     width: 60px !important;
+}
+
+.mat-column-type {
+    width: 100px !important;
 }
 
 tr.detail-row {

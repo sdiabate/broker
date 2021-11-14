@@ -1,7 +1,8 @@
 <mat-card class="mat-elevation-z0">
   <mat-card-content>
-    <div fxLayout="row" fxLayoutAlign="end center">
-      <button mat-stroked-button color="primary" (click)="addCustomer()">Ajouter</button>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap>
+      <button mat-stroked-button color="primary" (click)="addEnterprise()">Ajouter une entreprise</button>
+      <button mat-stroked-button color="primary" (click)="addCustomer()">Ajouter un particulier</button>
     </div>
 
     <div class="filter-group" fxLayout="row" fxLayoutAlign="space-between center">
@@ -131,9 +132,20 @@
 </mat-card>
 
 <ng-template #addCustomerDialog>
-  <h2 mat-dialog-title>Ajout de nouveau client</h2>
+  <h2 mat-dialog-title>Ajout de nouveau particulier</h2>
   <div mat-dialog-content>
     <app-customer-identity></app-customer-identity>
+  </div>
+  <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end stretch">
+    <button mat-button cdkFocusInitial mat-dialog-close = "cancel">Annuler</button>
+    <button mat-button mat-dialog-close = "add">Ajouter</button>
+  </div>
+</ng-template>
+
+<ng-template #addEnterpriseDialog>
+  <h2 mat-dialog-title>Ajout de nouvelle entreprise</h2>
+  <div mat-dialog-content>
+    <app-company-identity></app-company-identity>
   </div>
   <div mat-dialog-actions fxLayout="row" fxLayoutAlign="end stretch">
     <button mat-button cdkFocusInitial mat-dialog-close = "cancel">Annuler</button>

@@ -36,6 +36,8 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   @ViewChild("addCustomerDialog") addCustomerDialog: TemplateRef<any>;
 
+  @ViewChild("addEnterpriseDialog") addEnterpriseDialog: TemplateRef<any>;
+
   @ViewChild(CustomerIdentityComponent) customerIdentity: CustomerIdentityComponent;
 
   expandedElement: Customer | null;
@@ -58,11 +60,21 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   }
 
   showCustomer(customer: Customer) {
-    this.router.navigate(['/customer/' + customer.id])
+    this.router.navigate([(customer.person ? '/customer/' : '/corporate/') + customer.id])
   }
   
   addCustomer(): void {
     const dialogRef = this.dialog.open(this.addCustomerDialog, {
+      width: '650px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+    });
+  }
+
+  addEnterprise(): void {
+    const dialogRef = this.dialog.open(this.addEnterpriseDialog, {
       width: '650px'
     });
 

@@ -11,6 +11,8 @@ export class CompanyEditComponent implements OnInit {
 
   @Input() company: Company;
 
+  @Input() isCustomer: boolean;
+
   constructor(private formBuilder: FormBuilder) {
   }
 

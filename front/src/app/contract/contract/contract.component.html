@@ -14,8 +14,8 @@
         </div>
     </mat-tab>
     <mat-tab label="Garanties">
-        <div class="tab-content">
-            <app-warranty [warranties]="warranties$ | async"></app-warranty>
+        <div *ngIf = "warranties$ | async as warranties" class="tab-content">
+            <app-warranty [warranties]="warranties"></app-warranty>
         </div>
     </mat-tab>
     <mat-tab label="Payments">

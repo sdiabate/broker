@@ -17,6 +17,5 @@ export class InsurerEditComponent implements OnInit {
   }
 
   save(): void {
-    
   }
 }

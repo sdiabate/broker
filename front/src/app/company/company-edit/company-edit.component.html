@@ -1,40 +1,50 @@
-<div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap>
-    <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap fxFlex="33">
-        <mat-card class="mat-elevation-z0">
-            <mat-card-header>
-                <mat-card-title>Identité</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-company-identity></app-company-identity>
-            </mat-card-content>
-        </mat-card>
-       
-        <mat-card class="mat-elevation-z0">
-            <mat-card-header>
-                <mat-card-title>Adresse</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-address></app-address>
-            </mat-card-content>
-        </mat-card>
+<div fxLayout="column" fxLayoutGap fxLayoutAlign="start stretch">
+    <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap>
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap fxFlex="33">
+            <mat-card class="mat-elevation-z0">
+                <mat-card-header>
+                    <mat-card-title>Identité</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <app-company-identity></app-company-identity>
+                </mat-card-content>
+            </mat-card>
+           
+            <mat-card class="mat-elevation-z0">
+                <mat-card-header>
+                    <mat-card-title>Adresse</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <app-address></app-address>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    
+        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap fxFlex>
+            <mat-card class="mat-elevation-z0">
+                <mat-card-header>
+                    <mat-card-title>Documents</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <app-document [documents]="company?.documents"></app-document>
+                </mat-card-content>
+            </mat-card>
+            <mat-card class="mat-elevation-z0">
+                <mat-card-header>
+                    <mat-card-title>Rendez-vous</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <app-appointment [appointments]="company?.appointments"></app-appointment>
+                </mat-card-content>
+            </mat-card>
+        </div>
     </div>
-
-    <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap fxFlex>
-        <mat-card class="mat-elevation-z0">
-            <mat-card-header>
-                <mat-card-title>Documents</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-document [documents]="company?.documents"></app-document>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-elevation-z0" fxFlex>
-            <mat-card-header>
-                <mat-card-title>Rendez-vous</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-appointment [appointments]="company?.appointments"></app-appointment>
-            </mat-card-content>
-        </mat-card>
-    </div>
+    <mat-card *ngIf="isCustomer" class="mat-elevation-z0">
+        <mat-card-header>
+            <mat-card-title>Contrats</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <app-contract-list></app-contract-list>
+        </mat-card-content>
+    </mat-card>
 </div>

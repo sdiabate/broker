@@ -41,6 +41,12 @@ import { CustomerIdentityComponent } from './customer/customer-identity/customer
 import { InsurerComponent } from './insurer/insurer.component';
 import { InsurerEditComponent } from './insurer/insurer-edit/insurer-edit.component';
 import { CompanyIdentityComponent } from './company/company-identity/company-identity.component';
+import { CorporateComponent } from './customer/corporate/corporate.component';
+import { DashbordComponent } from './dashbord/dashbord.component';
+import { AgendaComponent } from './agenda/agenda.component';
+import { SettingsComponent } from './settings/settings.component';
+import { AdminComponent } from './admin/admin.component';
+import { AgentComponent } from './agent/agent.component';
 
 
 @Injectable()
@@ -81,7 +87,13 @@ export class DefaultLayoutGapStyleBuilder extends LayoutGapStyleBuilder {
     CustomerIdentityComponent,
     InsurerComponent,
     InsurerEditComponent,
-    CompanyIdentityComponent
+    CompanyIdentityComponent,
+    CorporateComponent,
+    DashbordComponent,
+    AgendaComponent,
+    SettingsComponent,
+    AdminComponent,
+    AgentComponent
   ],
   imports: [
     BrowserModule,
