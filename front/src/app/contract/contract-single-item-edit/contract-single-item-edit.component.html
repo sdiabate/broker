@@ -1,8 +1,8 @@
-<mat-card class="mat-elevation-z0">
-    <mat-card-header>
-        <mat-card-title>{{data.item.label}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <app-contract-item-edit [data]="data"></app-contract-item-edit>
-    </mat-card-content>
-</mat-card>
+<mat-expansion-panel class="mat-elevation-z0" expanded>
+	<mat-expansion-panel-header>
+		<mat-panel-title>
+			<span class="card-title">{{data.item.label}}</span>
+		</mat-panel-title>
+	</mat-expansion-panel-header>
+    <app-contract-item-edit [data]="data"></app-contract-item-edit>
+</mat-expansion-panel>

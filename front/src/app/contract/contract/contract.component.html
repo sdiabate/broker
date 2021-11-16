@@ -21,9 +21,6 @@
     <mat-tab label="Payments">
         <div class="tab-content">
         <mat-card class="mat-elevation-z0 payment-card">
-            <mat-card-header>
-                <mat-card-title>Payment</mat-card-title>
-            </mat-card-header>
             <mat-card-content>
                 <ng-container *ngTemplateOutlet="payment"></ng-container>
             </mat-card-content>
@@ -48,87 +45,79 @@
 <ng-template #left>
     <div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap>
         
-        <mat-card class="mat-elevation-z0">
-            <mat-card-header>
-                <mat-card-title>Client</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <div fxLayout="column" fxLayoutAlign="start stretch">
-                    <mat-form-field>
-                        <mat-label>Numéro client</mat-label>
-                        <input type="input" matInput>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Nom et prenom client</mat-label>
-                        <input type="input" matInput>
-                    </mat-form-field>
-                </div>
-            </mat-card-content>
-        </mat-card>
-
-        <mat-card class="mat-elevation-z0" fxFlex="49">
-            <mat-card-header>
-                <mat-card-title>Assurance</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <div fxLayout="column" fxLayoutAlign="space-between stretch">
-                    <mat-form-field>
-                        <mat-label>Produit</mat-label>
-                        <input type="input" matInput value="Assurance auto">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Assureur</mat-label>
-                        <input type="input" matInput value="AXA">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Date de signature</mat-label>
-                        <input matInput [matDatepicker]="signDatePicker">
-                        <mat-datepicker-toggle matSuffix [for]="signDatePicker"></mat-datepicker-toggle>
-                        <mat-datepicker #signDatePicker></mat-datepicker>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Date d'effet</mat-label>
-                        <input matInput [matDatepicker]="effectDatePicker">
-                        <mat-datepicker-toggle matSuffix [for]="effectDatePicker"></mat-datepicker-toggle>
-                        <mat-datepicker #effectDatePicker></mat-datepicker>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Fractionnement</mat-label>
-                        <input type="input" matInput value="Anunuel">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <mat-label>Renouvellement</mat-label>
-                        <input type="input" matInput value="Automatique">
-                    </mat-form-field>
-                </div>
-            </mat-card-content>
-        </mat-card>
-        
-        <mat-card class="mat-elevation-z0">
-            <mat-card-header>
-                <mat-card-title>Adresse du sinistre</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-address></app-address>
-            </mat-card-content>
-        </mat-card>
-        <mat-card class="mat-elevation-z0">
-            <mat-card-header>
-                <mat-card-title>Adresse de facturation</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <app-address></app-address>
-            </mat-card-content>
-        </mat-card>
-
-        <!-- <mat-expansion-panel class="mat-elevation-z0" >
+        <mat-expansion-panel class="mat-elevation-z0" expanded>
             <mat-expansion-panel-header>
-              <mat-panel-title>
-                <h2>Garanties de l'offre</h2>
-              </mat-panel-title>
+                <mat-panel-title>
+                    <span class="card-title">Client</span>
+                </mat-panel-title>
             </mat-expansion-panel-header>
-            <app-warranty [warranties$]="warranties$"></app-warranty>
-        </mat-expansion-panel> -->
+            <div fxLayout="column" fxLayoutAlign="start stretch">
+                <mat-form-field>
+                    <mat-label>Numéro client</mat-label>
+                    <input type="input" matInput>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Nom et prenom client</mat-label>
+                    <input type="input" matInput>
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="mat-elevation-z0" expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <span class="card-title">Assurance</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div fxLayout="column" fxLayoutAlign="space-between stretch">
+                <mat-form-field>
+                    <mat-label>Produit</mat-label>
+                    <input type="input" matInput value="Assurance auto">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Assureur</mat-label>
+                    <input type="input" matInput value="AXA">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Date de signature</mat-label>
+                    <input matInput [matDatepicker]="signDatePicker">
+                    <mat-datepicker-toggle matSuffix [for]="signDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #signDatePicker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Date d'effet</mat-label>
+                    <input matInput [matDatepicker]="effectDatePicker">
+                    <mat-datepicker-toggle matSuffix [for]="effectDatePicker"></mat-datepicker-toggle>
+                    <mat-datepicker #effectDatePicker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Fractionnement</mat-label>
+                    <input type="input" matInput value="Anunuel">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Renouvellement</mat-label>
+                    <input type="input" matInput value="Automatique">
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="mat-elevation-z0" expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <span class="card-title">Adresse du sinistre</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-address></app-address>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="mat-elevation-z0" expanded>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <span class="card-title">Adresse de facturation</span>
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <app-address></app-address>
+        </mat-expansion-panel>
     </div>
 </ng-template>
 

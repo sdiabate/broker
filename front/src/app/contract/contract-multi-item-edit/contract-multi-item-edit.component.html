@@ -1,47 +1,47 @@
-<mat-card class="mat-elevation-z0">
-    <mat-card-header>
-        <mat-card-title>{{item.label}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap>
+<mat-expansion-panel class="mat-elevation-z0" expanded>
+	<mat-expansion-panel-header>
+		<mat-panel-title>
+			<span class="card-title">{{item.label}}</span>
+		</mat-panel-title>
+	</mat-expansion-panel-header>
+    <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap>
 
-            <button (click)="onAdd()" fxFlexAlign="end" mat-stroked-button color="primary">Ajouter</button>
+        <button (click)="onAdd()" fxFlexAlign="end" mat-stroked-button color="primary">Ajouter</button>
+    
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+    
+            <ng-container *ngFor="let param of item.params" [matColumnDef]="param.name">
+                <th mat-header-cell *matHeaderCellDef> {{param.name}} </th>
+                <ng-container *ngIf="param.type!='DATE'">
+                    <td mat-cell *matCellDef="let element"> {{valueOf(param, element)}}</td>
+                </ng-container>
+                <ng-container *ngIf="param.type=='DATE'">
+                    <td mat-cell *matCellDef="let element"> {{valueOf(param, element) | date:"shortDate"}}</td>
+                </ng-container>
+            </ng-container>
         
-            <table mat-table [dataSource]="dataSource" class="mat-elevation-z0">
+            <!-- Edit action Column -->
+            <ng-container matColumnDef="edit">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <button (click)="onEdit(element)" mat-icon-button color="primary">
+                        <mat-icon class="mat-18">edit</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
         
-                <ng-container *ngFor="let param of item.params" [matColumnDef]="param.name">
-                    <th mat-header-cell *matHeaderCellDef> {{param.name}} </th>
-                    <ng-container *ngIf="param.type!='DATE'">
-                        <td mat-cell *matCellDef="let element"> {{valueOf(param, element)}}</td>
-                    </ng-container>
-                    <ng-container *ngIf="param.type=='DATE'">
-                        <td mat-cell *matCellDef="let element"> {{valueOf(param, element) | date:"shortDate"}}</td>
-                    </ng-container>
-                </ng-container>
-            
-                <!-- Edit action Column -->
-                <ng-container matColumnDef="edit">
-                    <th mat-header-cell *matHeaderCellDef></th>
-                    <td mat-cell *matCellDef="let element">
-                        <button (click)="onEdit(element)" mat-icon-button color="primary">
-                            <mat-icon class="mat-18">edit</mat-icon>
-                        </button>
-                    </td>
-                </ng-container>
-            
-                <!-- Delete action Column -->
-                <ng-container matColumnDef="delete">
-                    <th mat-header-cell *matHeaderCellDef></th>
-                    <td mat-cell *matCellDef="let element">
-                        <button mat-icon-button color="warn">
-                            <mat-icon class="mat-18">delete</mat-icon>
-                        </button>
-                    </td>
-                </ng-container>
-            
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
-              </table>
-        </div>
-    </mat-card-content>
-</mat-card>
+            <!-- Delete action Column -->
+            <ng-container matColumnDef="delete">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element">
+                    <button mat-icon-button color="warn">
+                        <mat-icon class="mat-18">delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+        
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</mat-expansion-panel>

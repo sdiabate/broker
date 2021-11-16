@@ -2,47 +2,50 @@
      fxLayout="column" fxLayoutGap fxLayoutAlign="start stretch">
     <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap>
         <div fxFlex="33" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap>
-            <mat-card fxFlex class="mat-elevation-z0">
-                <mat-card-content>
-                    <app-customer-identity></app-customer-identity>
-                </mat-card-content>
-            </mat-card>
+            <mat-expansion-panel class="mat-elevation-z0" expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <span class="card-title">Identité</span>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <app-customer-identity></app-customer-identity>
+            </mat-expansion-panel>
         </div>
         <div fxFlex fxLayout="column" fxLayoutAlign="start stretch">
             <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap fxFlex>
-                <mat-card class="mat-elevation-z0">
-                    <mat-card-header>
-                        <mat-card-title>Famille</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-family [members]="customer.person?.relationships"></app-family>
-                    </mat-card-content>
-                </mat-card>
-                <mat-card class="mat-elevation-z0">
-                    <mat-card-header>
-                        <mat-card-title>Documents</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-document [documents]="customer.documents"></app-document>
-                    </mat-card-content>
-                </mat-card>
-                <mat-card class="mat-elevation-z0" fxFlex>
-                    <mat-card-header>
-                        <mat-card-title>Rendez-vous</mat-card-title>
-                    </mat-card-header>
-                    <mat-card-content>
-                        <app-appointment [appointments]="customer.appointments"></app-appointment>
-                    </mat-card-content>
-                </mat-card>
+                <mat-expansion-panel class="mat-elevation-z0" expanded>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <span class="card-title">Famille</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <app-family [members]="customer.person?.relationships"></app-family>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="mat-elevation-z0" expanded>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <span class="card-title">Documents</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <app-document [documents]="customer.documents"></app-document>
+                </mat-expansion-panel>
+                <mat-expansion-panel class="mat-elevation-z0" expanded>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <span class="card-title">Rendez-vous</span>
+                        </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <app-appointment [appointments]="customer.appointments"></app-appointment>
+                </mat-expansion-panel>
             </div>
         </div>
     </div>
-    <mat-card class="mat-elevation-z0">
-        <mat-card-header>
-            <mat-card-title>Contrats</mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-            <app-contract-list [contracts]="customer.contracts"></app-contract-list>
-        </mat-card-content>
-    </mat-card>
+    <mat-expansion-panel class="mat-elevation-z0" expanded>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <span class="card-title">Contrats</span>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-contract-list [contracts]="customer.contracts"></app-contract-list>
+    </mat-expansion-panel>
 </div>
