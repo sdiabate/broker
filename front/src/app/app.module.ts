@@ -47,6 +47,8 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { SettingsComponent } from './settings/settings.component';
 import { AdminComponent } from './admin/admin.component';
 import { AgentComponent } from './agent/agent.component';
+import { ContractTypeConfigComponent } from './settings/contract-type-config/contract-type-config.component';
+import { ContractGroupConfigComponent } from './settings/contract-group-config/contract-group-config.component';
 
 
 @Injectable()
@@ -93,7 +95,9 @@ export class DefaultLayoutGapStyleBuilder extends LayoutGapStyleBuilder {
     AgendaComponent,
     SettingsComponent,
     AdminComponent,
-    AgentComponent
+    AgentComponent,
+    ContractTypeConfigComponent,
+    ContractGroupConfigComponent
   ],
   imports: [
     BrowserModule,

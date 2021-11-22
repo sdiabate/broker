@@ -31,7 +31,7 @@ export interface ContractType {
     id?: string;
     label?: string;
     items?: ContractItem[];
-    warranties?: string[];
+    warranties?: Warranty[];
 }
 
 export interface ContractItem {
@@ -39,4 +39,10 @@ export interface ContractItem {
     label?: string;
     params?: Param[];
     multi?: boolean; // Conducteur secondaire (firstname, lastname, etc.)
+}
+
+export interface Warranty {
+    id?: string;
+    label?: string;
+    farnchise?: number;
 }

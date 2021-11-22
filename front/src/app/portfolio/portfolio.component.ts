@@ -60,7 +60,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   }
 
   showCustomer(customer: Customer) {
-    this.router.navigate([(customer.person ? '/customer/' : '/corporate/') + customer.id])
+    this.router.navigate([(customer.person ? '/customer/' : '/corporate/') + customer.id]);
   }
   
   addCustomer(): void {

@@ -2,6 +2,7 @@ import { KeyValue } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { ContractCategory, ContractType } from '../model/contract.model';
 
 @Injectable({
@@ -29,6 +30,10 @@ export class MiscService {
 
   fetchContractCategories(): Observable<ContractCategory[]> {
     return this.http.get<ContractCategory[]>('/api/contractCategories');
+  }
+
+  getContractCategory(id: string): Observable<ContractCategory> {
+    return this.http.get<ContractCategory>('/api/contractCategories').pipe(map(categories => categories[0]));
   }
 
   fetchAppointmentDirections(): Observable<KeyValue<string, string>[]> {

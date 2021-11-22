@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+tr.element-row:hover {
+    background: whitesmoke;
+}
+
+.mat-column-detail,
+.mat-column-edit,
+.mat-column-delete {
+    width: 15px !important;
+}

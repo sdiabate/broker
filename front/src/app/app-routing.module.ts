@@ -11,6 +11,7 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { InsurerEditComponent } from './insurer/insurer-edit/insurer-edit.component';
 import { InsurerComponent } from './insurer/insurer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContractTypeConfigComponent } from './settings/contract-type-config/contract-type-config.component';
 import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'settings',
     component: SettingsComponent
+  },
+  {
+    path: 'contract-type-config/:id',
+    component: ContractTypeConfigComponent
   },
 ];
 
